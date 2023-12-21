@@ -87,13 +87,14 @@ body {
 }
 
 .welcome-message {
-  margin-top: 60px;
+  margin-top: 120px;
   text-align: center;
   margin-bottom: 10px;
   background-color: transparent;
   color: rgb(79, 79, 79);
   width: 100%; /* Center-align by setting width to 100% */
   font-weight: lighter;
+  font-style: italic;
 }
 
 .user-input-container {
@@ -141,7 +142,7 @@ button:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #f06292;
+  background-color: #fff;
   margin: 0 5px;
   animation: pulse 1s infinite;
 }
@@ -169,6 +170,6 @@ button:hover {
 }
 
 .loading-text {
-  color: #f06292;
+  color: #fff;
   font-weight: bold;
 }
