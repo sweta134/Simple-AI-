@@ -1,5 +1,6 @@
 const chatDisplay = document.getElementById('chat-display');
 const userInput = document.getElementById('user-input');
+const loadContainer=document.getElementById('loading-container');
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   appendMessage('model', 'Welcome! Start typing to chat with the AI.', 'welcome-message');
@@ -53,11 +54,14 @@ function appendMessage(role, content, customClass) {
     messageElement.classList.add(customClass);
   }
 
-  chatDisplay.appendChild(messageElementOut);
-  chatDisplay.scrollTop = chatDisplay.scrollHeight;
+  // chatDisplay.appendChild(messageElementOut);
+  chatDisplay.insertBefore(messageElementOut, loadContainer);
+  requestAnimationFrame(() => {
+    chatDisplay.scrollTop = chatDisplay.scrollHeight;
+  });
 
   // Check if this is the first user message and remove the initial welcome message
-  if (role === 'user' && chatDisplay.childElementCount === 2) {
+  if (role === 'user' && chatDisplay.childElementCount === 3) {
     const welcomeMessage = chatDisplay.firstElementChild;
     welcomeMessage.remove();
   }
@@ -66,9 +70,11 @@ function appendMessage(role, content, customClass) {
 function sendMessage() {
   const userMessage = userInput.value.trim();
   if (userMessage === '') return;
-
   appendMessage('user', userMessage);
   userInput.value = '';
+
+  // Show loading animation while waiting for AI response
+  showLoadingAnimation();
 
   // Make a request to your server
   fetch('http://localhost:3000/api/chat', {
@@ -82,9 +88,13 @@ function sendMessage() {
     .then((data) => {
       const modelResponse = data.response;
       appendMessage('model', modelResponse);
+
+      // Hide loading animation after receiving AI response
+      hideLoadingAnimation();
     })
     .catch((error) => {
       console.error('Error:', error);
+      hideLoadingAnimation(); // Hide loading animation in case of an error
     });
 }
 
@@ -93,3 +103,13 @@ userInput.addEventListener('keyup', (event) => {
     sendMessage();
   }
 });
+
+function showLoadingAnimation() {
+  const loadingContainer = document.getElementById('loading-container');
+  loadingContainer.style.display = 'flex';
+}
+
+function hideLoadingAnimation() {
+  const loadingContainer = document.getElementById('loading-container');
+  loadingContainer.style.display = 'none';
+}

@@ -10,8 +10,8 @@ body {
 }
 
 .chat-container {
-  width: 400px;
-  height: 350px;
+  width: 500px;
+  height: 450px;
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -27,7 +27,6 @@ body {
   flex: 1;
   overflow-y: auto;
   margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
 
@@ -99,6 +98,8 @@ body {
 
 .user-input-container {
   display: flex;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
 }
 
 #user-input {
@@ -122,4 +123,52 @@ button {
 
 button:hover {
   background-color: #45a049; /* Darker green on hover */
+}
+
+.loading-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading-dots {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f06292;
+  margin: 0 5px;
+  animation: pulse 1s infinite;
+}
+
+.dot1 {
+  animation-delay: 0.2s;
+}
+
+.dot2 {
+  animation-delay: 0.4s;
+}
+
+.dot3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.loading-text {
+  color: #f06292;
+  font-weight: bold;
 }
