@@ -3,15 +3,15 @@ body {
   background: linear-gradient(to bottom right, #ff6b6b, #3498db); /* Vibrant gradient background */
   margin: 0;
   padding: 0;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 91.5vh;
 }
 
 .chat-container {
   width: 500px;
-  height: 450px;
+  height: 430px;
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -173,3 +173,28 @@ button:hover {
   color: #fff;
   font-weight: bold;
 }
+
+footer {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  /* padding: 10px; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+.chat-bot{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.chat-bot img{
+  width: 40px;
+  height: 40px;
+  margin-right: 6px;
+}
+
