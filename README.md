@@ -145,6 +145,14 @@ Thank you for considering contributing to the Chat Interface project! Contributi
    ```
 6. Create a Pull Request: Open a pull request from your forked repository to the original repository. Provide a detailed description of your changes.
 
+## Live Demo 🚀
+
+Check out the live demo of the Chat Interface:
+
+[Live Demo](https://simple-ai-pink.vercel.app/)
+
+Feel free to interact with the AI and experience the chat interface in action! 🌐💬
+
 ## Acknowledgments 🙌
 
 A special thanks to OpenAI for providing the incredible GPT-3.5 model that powers our AI responses.
