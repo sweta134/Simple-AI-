@@ -63,6 +63,10 @@ git clone [repository-url]
 cd your-project
 npm install
 ```
+### Starting the server
+```bash
+npm run dev
+```
 
 ## Usage 🚦
 
