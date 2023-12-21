@@ -47,3 +47,7 @@ A special thanks to OpenAI for providing the incredible GPT-3.5 model that power
 ## Contact 📬
 
 Have questions or suggestions? Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/sweta-upadhyay-369841196/) or [Email](mailto:upadhyaysweta17@example.com).
+
+## Screenshots 📷
+
+![Chat Interface](Images/Screenshot - Simple Chat AI Interface.png)
