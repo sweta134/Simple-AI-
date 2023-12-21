@@ -10,8 +10,10 @@ body {
 }
 
 .chat-container {
-  width: 500px;
-  height: 430px;
+  /* width: 500px; */
+  /* height: 430px; */
+  height: 80%;
+  width: 40%;
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -198,3 +200,9 @@ footer {
   margin-right: 6px;
 }
 
+@media screen and (max-width: 588px) {
+  .chat-container{
+    height: 80%;
+  width: 70%;
+  }
+}
