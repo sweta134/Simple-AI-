@@ -149,7 +149,7 @@ Thank you for considering contributing to the Chat Interface project! Contributi
 
 Check out the live demo of the Chat Interface:
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen)]([https://your-project-name.vercel.app](https://simple-ai-pink.vercel.app/))
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen)](https://simple-ai-pink.vercel.app/)
 
 Feel free to interact with the AI and experience the chat interface in action! 🌐💬
 
