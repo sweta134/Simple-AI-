@@ -77,7 +77,7 @@ function sendMessage() {
   showLoadingAnimation();
 
   // Make a request to your server
-  fetch('http://localhost:3000/api/chat', {
+  fetch('https://simple-ai-pink.vercel.app:3000/api/chat', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
